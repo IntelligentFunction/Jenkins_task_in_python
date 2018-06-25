@@ -18,6 +18,7 @@ def create_channel(channel_type,channel_number):
     sleep(3)
     channel_dict['type'] = "PPV"
     channel_dict['number'] = 4
+    channel_dict['timestamp'] = datetime.now()
     return channel_dict
 
 
@@ -25,12 +26,13 @@ def create_channel(channel_type,channel_number):
 if __name__ == "__main__":
 
     # mocked input
+
     channel_type = "F1"
     channel_number = "4"
 
     new_channel = create_channel("PPV",4)
 
-    print(f"channel {new_channel['type']} {new_channel['number']} has completed ")
+    print(f"channel {new_channel['type']} {new_channel['number']} has completed at {new_channel['timestamp']} ")
 
     
     
